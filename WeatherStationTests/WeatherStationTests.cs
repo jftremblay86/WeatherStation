@@ -5,6 +5,9 @@ namespace WeatherStationTests
 {
     public class WeatherStationTests
     {
+        public WeatherStationTests()
+        {
 
+        }
     }
 }

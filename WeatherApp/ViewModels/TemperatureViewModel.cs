@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WeatherApp.ViewModels
 {
-    public class TemperatureViewModel : BaseViewModel
+    public class TemperatureViewModdel : BaseViewModel
     {
         /// La réponse est ici : http://bit.ly/420_dellorkcir
     }

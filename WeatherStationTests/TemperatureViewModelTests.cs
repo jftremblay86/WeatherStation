@@ -11,7 +11,7 @@ namespace WeatherStationTests
     {
         // System Under Test
         // Utilisez ce membre dans les tests
-        TemperatureViewModel _sut = new TemperatureViewModel();
+
 
         /// <summary>
         /// Test la fonctionnalité de conversion de Celsius à Fahrenheit
