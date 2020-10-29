@@ -6,6 +6,7 @@ using WeatherApp.ViewModels;
 using Xunit;
 using Xunit.Sdk;
 using Moq;
+using WeatherApp.Services;
 //jf tremblay
 namespace WeatherStationTests
 {
@@ -103,11 +104,11 @@ namespace WeatherStationTests
         public void CanGetTemp_WhenServiceIsSet_ReturnsTrue()
         {
             // Arrange
-
+            Mock<ITemperatureService> i = new Mock<ITemperatureService>();
             // Act       
-
+            _sut.SetTemperatureService(i.Object);
             // Assert
-
+            Assert.True(_sut.CanGetTemp());
             /// TODO : git commit -a -m "T05 CanGetTemp_WhenServiceIsSet_ReturnsTrue : Done"
         }
 
