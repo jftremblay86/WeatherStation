@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using WeatherApp.ViewModels;
 using Xunit;
-
+//jf tremblay
 namespace WeatherStationTests
 {
     public class TemperatureViewModelTests : IDisposable
