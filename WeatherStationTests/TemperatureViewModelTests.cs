@@ -5,6 +5,7 @@ using System.Text;
 using WeatherApp.ViewModels;
 using Xunit;
 using Xunit.Sdk;
+using Moq;
 //jf tremblay
 namespace WeatherStationTests
 {
@@ -90,7 +91,7 @@ namespace WeatherStationTests
             // Act       
 
             // Assert
-
+            Assert.False(_sut.CanGetTemp());
             /// TODO : git commit -a -m "T04 CanGetTemp_WhenServiceIsNull_ReturnsFalse : Done"
         }
 

@@ -12,7 +12,19 @@ namespace WeatherApp.ViewModels
         public ITemperatureService TemperatureService;
         public DelegateCommand<string> GetTempCommand{get; set;}
         public TemperatureModel CurrentTemp { get; set; }
-        
+        public void SetTemperatureService(ITemperatureService i)
+        {
+            TemperatureService = i;
+        }
+        public bool CanGetTemp()
+        {
+            if (TemperatureService == null)
+            {
+                return false;
+            }
+            else
+                return true;
+        }
 
         public static double CelsiusInFahrenheit(double c)
         {
