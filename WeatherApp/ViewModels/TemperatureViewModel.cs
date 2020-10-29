@@ -1,11 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using WeatherApp.Commands;
+using WeatherApp.Models;
+using WeatherApp.Services;
 
 namespace WeatherApp.ViewModels
 {
     public class TemperatureViewModel : BaseViewModel
     {
+        public ITemperatureService TemperatureService;
+        public DelegateCommand<string> GetTempCommand{get; set;}
+        public TemperatureModel CurrentTemp { get; set; }
+        
+
         public static double CelsiusInFahrenheit(double c)
         {
             return Math.Round((c * 9 / 5) + 32,1);

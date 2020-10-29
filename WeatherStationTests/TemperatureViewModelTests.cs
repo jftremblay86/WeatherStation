@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using WeatherApp.ViewModels;
 using Xunit;
+using Xunit.Sdk;
 //jf tremblay
 namespace WeatherStationTests
 {
@@ -73,7 +74,7 @@ namespace WeatherStationTests
             // Act       
 
             // Assert
-
+            Assert.Throws<NullReferenceException>(() => _sut.GetTempCommand.Execute(null));
             /// TODO : git commit -a -m "T03 GetTempCommand_ExecuteIfNullService_ShouldThrowNullException : Done"
         }
 
